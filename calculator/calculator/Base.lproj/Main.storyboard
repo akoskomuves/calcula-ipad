@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="splitview2_3"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QfC-i5-U3P">
+                                <rect key="frame" x="157" y="144" width="380" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-gy-MI4">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-sg-QOg" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="AFN-FS-9wt"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Yc2-gR-hBb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="acaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2t-lt-30x"/>
+                                                    <action selector="changeUnaryColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Di0-Ny-uyO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-zn-oIW" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="UD0-1p-5bR"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qEV-Y4-tJo"/>
+                                                </constraints>
+                                                <state key="normal" image="Plus-Minus">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeUnaryColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="b96-3f-Bgd"/>
+                                                    <action selector="some:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DH8-P4-eHf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtl-Hw-NQN" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="7Af-fm-Jl6"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="BJF-nE-bu3"/>
+                                                </constraints>
+                                                <state key="normal" image="Percentage">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeUnaryColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="zNc-u5-yCm"/>
+                                                    <action selector="percentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DgP-41-V8X"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ay-le-AWa" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="/"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="5VR-Vp-Cgb"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Gg2-L7-rw6"/>
+                                                </constraints>
+                                                <state key="normal" image="Division">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="baseOperatorDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fG4-GT-YDV"/>
+                                                    <action selector="changeOperatorColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="MFq-ZI-8NU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4uH-Sv-w9T">
+                                        <rect key="frame" x="0.0" y="100" width="380" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-29-3SB" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="IW0-Y2-piQ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Z3w-vB-avN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="jTy-1K-iay"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xEl-3o-msO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kau-ex-fgX" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Zn8-3z-eOJ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="xC9-a6-Cgn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Hre-lf-WJD"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rss-EM-GPo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-AZ-376" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="MLB-4A-wA4"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WpA-B9-h5b"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="J50-K2-Sa7"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJU-Tp-1aD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX1-BR-YFK" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="*"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Chr-Zi-xRi"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="RkQ-ok-cLc"/>
+                                                </constraints>
+                                                <state key="normal" image="Multiplication">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="baseOperatorDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ou7-lb-fzN"/>
+                                                    <action selector="changeOperatorColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="hGU-9G-oEI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9SR-W3-td2">
+                                        <rect key="frame" x="0.0" y="200" width="380" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-o7-Oqp" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="DKE-AN-Pc3"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="wI4-ni-RJa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="cvq-1q-GJR"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAX-el-hms"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-wh-Hce" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Cbq-iO-JSY"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cdj-ua-cLN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="bX5-yG-AaK"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNS-6K-X9a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-SE-daH" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="hPw-F8-jnK"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="rel-7Y-1g2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="LLv-py-g8L"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mrz-LP-iLP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MP2-fb-T1p" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="-"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ZxR-2j-EPT"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="sdD-lb-KEY"/>
+                                                </constraints>
+                                                <state key="normal" image="Substraction">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="baseOperatorDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmc-3j-YVr"/>
+                                                    <action selector="changeOperatorColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="XJB-eq-Uaj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="af9-c7-U9V">
+                                        <rect key="frame" x="0.0" y="300" width="380" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdn-Yp-VV1" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="HyR-RH-pqd"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eg5-BT-r1c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="OEZ-1N-VRV"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kih-6b-Zwe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-DZ-wQn" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="JPG-Eb-LX1"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="zjH-8q-cKw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="ZVu-Cc-jcg"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8M-wq-2lo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5I-9B-lfZ" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cDQ-Er-6GK"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eSW-6I-n8M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="k8m-9m-Pmd"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hs-TQ-Weq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-MD-zdC" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="+"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="HFX-I5-ge2"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="YXd-zy-zo6"/>
+                                                </constraints>
+                                                <state key="normal" image="Addition">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="baseOperatorDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nK8-XN-EZQ"/>
+                                                    <action selector="changeOperatorColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="xMB-BA-FMS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-1r-XUS">
+                                        <rect key="frame" x="0.0" y="400" width="380" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-GV-l2i" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="80"/>
+                                                <color key="backgroundColor" red="0.14902088046073914" green="0.14901960784313725" blue="0.1490197479724884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="nyx-Y2-sik"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <inset key="contentEdgeInsets" minX="33" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="xYr-n3-fJZ"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TC9-ML-32b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-Zs-lk7" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier=","/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="W18-oH-LSO"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="dih-jl-05z"/>
+                                                    <constraint firstAttribute="width" constant="80" id="szX-0m-ZVF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title=",">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeNumberColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="obU-Vy-bAU"/>
+                                                    <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXC-Xm-bXB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTK-wf-qUc" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="300" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="UJk-iZ-KbF"/>
+                                                </constraints>
+                                                <state key="normal" image="Equal">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeOperatorColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Lwx-kR-BxJ"/>
+                                                    <action selector="eqauls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AS5-vc-HjP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WTK-wf-qUc" firstAttribute="height" secondItem="lkk-1r-XUS" secondAttribute="height" id="BbJ-3V-GTT"/>
+                                            <constraint firstItem="CgD-Zs-lk7" firstAttribute="height" secondItem="lkk-1r-XUS" secondAttribute="height" id="Xcb-WM-9ob"/>
+                                            <constraint firstItem="dhA-GV-l2i" firstAttribute="centerY" secondItem="lkk-1r-XUS" secondAttribute="centerY" id="irk-ti-M4h"/>
+                                            <constraint firstItem="dhA-GV-l2i" firstAttribute="height" secondItem="lkk-1r-XUS" secondAttribute="height" id="p2F-Mw-FzJ"/>
+                                            <constraint firstItem="CgD-Zs-lk7" firstAttribute="centerY" secondItem="lkk-1r-XUS" secondAttribute="centerY" id="zAE-ug-9e1"/>
+                                            <constraint firstItem="WTK-wf-qUc" firstAttribute="centerY" secondItem="lkk-1r-XUS" secondAttribute="centerY" id="zhK-a2-69f"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="2zb-6Z-Hgw"/>
+                                    <constraint firstAttribute="width" priority="999" constant="380" id="KEn-Rv-TbT"/>
+                                    <constraint firstItem="WTK-wf-qUc" firstAttribute="leading" secondItem="SRR-MD-zdC" secondAttribute="leading" id="NAn-Uy-Wk8"/>
+                                    <constraint firstItem="WTK-wf-qUc" firstAttribute="trailing" secondItem="SRR-MD-zdC" secondAttribute="trailing" id="PR6-sz-v26"/>
+                                    <constraint firstItem="dhA-GV-l2i" firstAttribute="leading" secondItem="tdn-Yp-VV1" secondAttribute="leading" id="Pus-DK-nkv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="360" id="dnM-rj-Wjf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="285" id="fyl-6x-Enf"/>
+                                    <constraint firstItem="dhA-GV-l2i" firstAttribute="trailing" secondItem="MAw-DZ-wQn" secondAttribute="trailing" id="so6-f9-CVb"/>
+                                    <constraint firstItem="CgD-Zs-lk7" firstAttribute="leading" secondItem="f5I-9B-lfZ" secondAttribute="leading" id="tiK-QA-f2B"/>
+                                    <constraint firstItem="CgD-Zs-lk7" firstAttribute="trailing" secondItem="f5I-9B-lfZ" secondAttribute="trailing" id="zLX-RY-cC8"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Q5-Mb-Lay" customClass="TapAndCopyLabel" customModule="calculator" customModuleProvider="target">
+                                <rect key="frame" x="177" y="44" width="340" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Unu-yp-rTn"/>
+                                    <constraint firstAttribute="width" priority="750" constant="340" id="dWz-m3-ILl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="64"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QfC-i5-U3P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="3jo-z3-aPJ"/>
+                            <constraint firstItem="QfC-i5-U3P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Np-EE-cw7"/>
+                            <constraint firstItem="0Q5-Mb-Lay" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ITU-ZQ-tnJ"/>
+                            <constraint firstItem="gfu-sg-QOg" firstAttribute="top" secondItem="0Q5-Mb-Lay" secondAttribute="bottom" constant="20" id="OSF-Yq-kgz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Q5-Mb-Lay" secondAttribute="trailing" constant="32" id="Qfa-Ft-Xjb"/>
+                            <constraint firstItem="0Q5-Mb-Lay" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="fUL-Kh-hJa"/>
+                            <constraint firstItem="QfC-i5-U3P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbl-3i-RVg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QfC-i5-U3P" secondAttribute="trailing" constant="15" id="riR-hn-FsK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="acButton" destination="gfu-sg-QOg" id="dM4-yX-K4b"/>
+                        <outlet property="additionButton" destination="SRR-MD-zdC" id="RXF-2t-Kkj"/>
+                        <outlet property="divideButton" destination="2ay-le-AWa" id="iJX-Eo-YwH"/>
+                        <outlet property="dotButton" destination="CgD-Zs-lk7" id="NnE-5K-yLH"/>
+                        <outlet property="eightButton" destination="kau-ex-fgX" id="fhl-Fk-vh0"/>
+                        <outlet property="equalButton" destination="WTK-wf-qUc" id="8qZ-6a-erU"/>
+                        <outlet property="fifthButton" destination="YoD-wh-Hce" id="lgQ-UP-VvV"/>
+                        <outlet property="firstButton" destination="tdn-Yp-VV1" id="hqB-8F-CdA"/>
+                        <outlet property="firstStackView" destination="wPz-gy-MI4" id="rVP-5f-DOv"/>
+                        <outlet property="fourthButton" destination="aAn-o7-Oqp" id="Va2-5n-N2Y"/>
+                        <outlet property="fourthStackView" destination="af9-c7-U9V" id="GsR-Ra-1Xh"/>
+                        <outlet property="labelStackViewSpace" destination="OSF-Yq-kgz" id="iMT-Eu-qjz"/>
+                        <outlet property="multiplyButton" destination="VX1-BR-YFK" id="Pks-qo-xIH"/>
+                        <outlet property="nineButton" destination="0hd-AZ-376" id="u3n-zf-tgJ"/>
+                        <outlet property="numberLabelHeight" destination="Unu-yp-rTn" id="Hv6-c5-KQi"/>
+                        <outlet property="numberlabel" destination="0Q5-Mb-Lay" id="Kd0-dI-Agu"/>
+                        <outlet property="percentageButton" destination="rtl-Hw-NQN" id="gPf-sP-jDi"/>
+                        <outlet property="reverseButton" destination="4AO-zn-oIW" id="d7E-ro-yTx"/>
+                        <outlet property="secondButton" destination="MAw-DZ-wQn" id="rb2-xZ-XRn"/>
+                        <outlet property="secondStackView" destination="4uH-Sv-w9T" id="1Si-J8-AfC"/>
+                        <outlet property="sevenButton" destination="MXr-29-3SB" id="Z7g-kj-JEc"/>
+                        <outlet property="sixthButton" destination="DPy-SE-daH" id="efp-4g-mnm"/>
+                        <outlet property="stackView" destination="QfC-i5-U3P" id="nnG-ed-hKc"/>
+                        <outlet property="stackViewHeight" destination="2zb-6Z-Hgw" id="F2d-OS-qPQ"/>
+                        <outlet property="substractionButton" destination="MP2-fb-T1p" id="4j2-Vu-HK5"/>
+                        <outlet property="thirdButton" destination="f5I-9B-lfZ" id="9O1-AG-tlJ"/>
+                        <outlet property="thirdStackView" destination="9SR-W3-td2" id="fAy-1w-rXU"/>
+                        <outlet property="zeroButton" destination="dhA-GV-l2i" id="Ylo-9b-U9E"/>
+                        <outletCollection property="allHeights" destination="HFX-I5-ge2" collectionClass="NSMutableArray" id="TRg-Ms-Ubv"/>
+                        <outletCollection property="allHeights" destination="AFN-FS-9wt" collectionClass="NSMutableArray" id="r63-1g-rMM"/>
+                        <outletCollection property="allHeights" destination="UD0-1p-5bR" collectionClass="NSMutableArray" id="MZV-Sb-7PK"/>
+                        <outletCollection property="allHeights" destination="7Af-fm-Jl6" collectionClass="NSMutableArray" id="d5e-HD-rgO"/>
+                        <outletCollection property="allHeights" destination="Gg2-L7-rw6" collectionClass="NSMutableArray" id="jil-x5-gtU"/>
+                        <outletCollection property="allHeights" destination="nyx-Y2-sik" collectionClass="NSMutableArray" id="NLC-7O-uDB"/>
+                        <outletCollection property="allHeights" destination="W18-oH-LSO" collectionClass="NSMutableArray" id="UJ3-B5-grg"/>
+                        <outletCollection property="allHeights" destination="UJk-iZ-KbF" collectionClass="NSMutableArray" id="YCn-Sy-z3a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="174.96251874062969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Addition" width="24" height="24"/>
+        <image name="Division" width="24" height="24"/>
+        <image name="Equal" width="24" height="14"/>
+        <image name="Multiplication" width="22" height="22"/>
+        <image name="Percentage" width="26" height="26"/>
+        <image name="Plus-Minus" width="26" height="24"/>
+        <image name="Substraction" width="24" height="4"/>
+    </resources>
+</document>
