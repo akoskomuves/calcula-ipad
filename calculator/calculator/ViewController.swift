@@ -88,7 +88,7 @@ class ViewController: UIViewController {
             }
         }
         if let number = sender.accessibilityIdentifier {
-            if number == "," {
+            if number == "." {
                 if hasComma {
                     return
                 }
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
             }
             var textnum = String(numberlabel.text!)
             if operation {
-                textnum = (number == ",") ? "0" : ""
+                textnum = (number == ".") ? "0" : ""
                 operation = false
             }
             textnum = textnum + number
@@ -194,8 +194,7 @@ class ViewController: UIViewController {
         }
         if let result = result {
             let value  = String(format: "%g", result)
-            numberlabel.text = value.replacingOccurrences(of: ".", with: ",")
-
+            numberlabel.text = value
         } else {
             numberlabel.text = "Error"
         }

@@ -327,14 +327,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-Zs-lk7" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration" identifier=","/>
+                                                <accessibility key="accessibilityConfiguration" identifier="."/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="W18-oH-LSO"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="dih-jl-05z"/>
                                                     <constraint firstAttribute="width" constant="80" id="szX-0m-ZVF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title=",">
+                                                <state key="normal" title=".">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
