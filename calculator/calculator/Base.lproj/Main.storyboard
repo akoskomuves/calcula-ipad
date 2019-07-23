@@ -24,15 +24,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-gy-MI4">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-sg-QOg" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-sg-QOg">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="AFN-FS-9wt"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Yc2-gR-hBb"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                                <state key="normal" title="AC">
+                                                <state key="normal" image="ac_norm">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -40,14 +39,13 @@
                                                     <action selector="changeUnaryColorTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Di0-Ny-uyO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-zn-oIW" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-zn-oIW">
                                                 <rect key="frame" x="100" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="UD0-1p-5bR"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qEV-Y4-tJo"/>
                                                 </constraints>
-                                                <state key="normal" image="Plus-Minus">
+                                                <state key="normal" image="plus_minus_norm">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -55,14 +53,13 @@
                                                     <action selector="some:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DH8-P4-eHf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtl-Hw-NQN" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtl-Hw-NQN">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="7Af-fm-Jl6"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="BJF-nE-bu3"/>
                                                 </constraints>
-                                                <state key="normal" image="Percentage">
+                                                <state key="normal" image="perc_norm">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -70,15 +67,14 @@
                                                     <action selector="percentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DgP-41-V8X"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ay-le-AWa" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ay-le-AWa">
                                                 <rect key="frame" x="300" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="/"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="5VR-Vp-Cgb"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Gg2-L7-rw6"/>
                                                 </constraints>
-                                                <state key="normal" image="Division">
+                                                <state key="normal" image="div_norm">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -91,16 +87,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4uH-Sv-w9T">
                                         <rect key="frame" x="0.0" y="100" width="380" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-29-3SB" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-29-3SB">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="7"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="IW0-Y2-piQ"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Z3w-vB-avN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="7">
+                                                <state key="normal" image="7_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -108,16 +103,15 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xEl-3o-msO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kau-ex-fgX" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kau-ex-fgX">
                                                 <rect key="frame" x="100" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Zn8-3z-eOJ"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="xC9-a6-Cgn"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="8">
+                                                <state key="normal" image="8_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -125,16 +119,15 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rss-EM-GPo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-AZ-376" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-AZ-376">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="9"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="MLB-4A-wA4"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WpA-B9-h5b"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="9">
+                                                <state key="normal" image="9_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -142,15 +135,14 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJU-Tp-1aD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX1-BR-YFK" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VX1-BR-YFK">
                                                 <rect key="frame" x="300" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="*"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Chr-Zi-xRi"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="RkQ-ok-cLc"/>
                                                 </constraints>
-                                                <state key="normal" image="Multiplication">
+                                                <state key="normal" image="mult_norm">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -163,16 +155,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9SR-W3-td2">
                                         <rect key="frame" x="0.0" y="200" width="380" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-o7-Oqp" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-o7-Oqp">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="DKE-AN-Pc3"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="wI4-ni-RJa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="4">
+                                                <state key="normal" image="4_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -180,16 +171,15 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAX-el-hms"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-wh-Hce" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-wh-Hce">
                                                 <rect key="frame" x="100" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Cbq-iO-JSY"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cdj-ua-cLN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="5">
+                                                <state key="normal" image="5_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -197,16 +187,15 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNS-6K-X9a"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-SE-daH" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-SE-daH">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="hPw-F8-jnK"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="rel-7Y-1g2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="6">
+                                                <state key="normal" image="6_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -214,15 +203,14 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mrz-LP-iLP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MP2-fb-T1p" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MP2-fb-T1p">
                                                 <rect key="frame" x="300" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="-"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ZxR-2j-EPT"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="sdD-lb-KEY"/>
                                                 </constraints>
-                                                <state key="normal" image="Substraction">
+                                                <state key="normal" image="sub_norm">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -235,16 +223,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="af9-c7-U9V">
                                         <rect key="frame" x="0.0" y="300" width="380" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdn-Yp-VV1" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdn-Yp-VV1">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="HyR-RH-pqd"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eg5-BT-r1c"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="1">
+                                                <state key="normal" image="1_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -252,16 +239,15 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kih-6b-Zwe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-DZ-wQn" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAw-DZ-wQn">
                                                 <rect key="frame" x="100" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="JPG-Eb-LX1"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="zjH-8q-cKw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="2">
+                                                <state key="normal" image="2_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -269,16 +255,15 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8M-wq-2lo"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5I-9B-lfZ" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5I-9B-lfZ">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cDQ-Er-6GK"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eSW-6I-n8M"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title="3">
+                                                <state key="normal" image="3_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -286,15 +271,14 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hs-TQ-Weq"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-MD-zdC" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-MD-zdC">
                                                 <rect key="frame" x="300" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="+"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="HFX-I5-ge2"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="YXd-zy-zo6"/>
                                                 </constraints>
-                                                <state key="normal" image="Addition">
+                                                <state key="normal" image="add_norm">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -307,16 +291,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkk-1r-XUS">
                                         <rect key="frame" x="0.0" y="400" width="380" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-GV-l2i" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-GV-l2i">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="80"/>
-                                                <color key="backgroundColor" red="0.14902088046073914" green="0.14901960784313725" blue="0.1490197479724884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="nyx-Y2-sik"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <inset key="contentEdgeInsets" minX="33" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="0">
+                                                <state key="normal" backgroundImage="0_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -324,9 +307,8 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TC9-ML-32b"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-Zs-lk7" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-Zs-lk7">
                                                 <rect key="frame" x="200" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="."/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="W18-oH-LSO"/>
@@ -334,7 +316,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="szX-0m-ZVF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                <state key="normal" title=".">
+                                                <state key="normal" image="dot_norm">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -342,13 +324,12 @@
                                                     <action selector="numberDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXC-Xm-bXB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTK-wf-qUc" customClass="CustomButton" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTK-wf-qUc">
                                                 <rect key="frame" x="300" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" red="1" green="0.4823529411764706" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="UJk-iZ-KbF"/>
                                                 </constraints>
-                                                <state key="normal" image="Equal">
+                                                <state key="normal" image="equal_norm">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -449,12 +430,24 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Addition" width="24" height="24"/>
-        <image name="Division" width="24" height="24"/>
-        <image name="Equal" width="24" height="14"/>
-        <image name="Multiplication" width="22" height="22"/>
-        <image name="Percentage" width="26" height="26"/>
-        <image name="Plus-Minus" width="26" height="24"/>
-        <image name="Substraction" width="24" height="4"/>
+        <image name="0_norm" width="180" height="80"/>
+        <image name="1_norm" width="80" height="80"/>
+        <image name="2_norm" width="80" height="80"/>
+        <image name="3_norm" width="80" height="80"/>
+        <image name="4_norm" width="80" height="80"/>
+        <image name="5_norm" width="80" height="80"/>
+        <image name="6_norm" width="80" height="80"/>
+        <image name="7_norm" width="80" height="80"/>
+        <image name="8_norm" width="80" height="80"/>
+        <image name="9_norm" width="80" height="80"/>
+        <image name="ac_norm" width="80" height="80"/>
+        <image name="add_norm" width="80" height="80"/>
+        <image name="div_norm" width="80" height="80"/>
+        <image name="dot_norm" width="80" height="80"/>
+        <image name="equal_norm" width="80" height="80"/>
+        <image name="mult_norm" width="80" height="80"/>
+        <image name="perc_norm" width="80" height="80"/>
+        <image name="plus_minus_norm" width="80" height="80"/>
+        <image name="sub_norm" width="80" height="80"/>
     </resources>
 </document>
