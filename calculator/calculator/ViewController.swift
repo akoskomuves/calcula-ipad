@@ -1,39 +1,40 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
-    @IBOutlet weak var numberlabel: UILabel!
+    var numberlabel = UILabel()
     var highlightedButton: CustomButton?
 
-    @IBOutlet var stackView: UIStackView!
-    @IBOutlet var firstStackView: UIStackView!
-    @IBOutlet var secondStackView: UIStackView!
-    @IBOutlet var thirdStackView: UIStackView!
-    @IBOutlet var fourthStackView: UIStackView!
+    var stackView = UIStackView()
+    var firstStackView = UIStackView()
+    var secondStackView = UIStackView()
+    var thirdStackView = UIStackView()
+    var fourthStackView = UIStackView()
 
-    @IBOutlet var stackViewHeight: NSLayoutConstraint!
-    @IBOutlet var labelStackViewSpace: NSLayoutConstraint!
-    @IBOutlet var numberLabelHeight: NSLayoutConstraint!
+    var stackViewHeight: NSLayoutConstraint!
+    var labelStackViewSpace: NSLayoutConstraint!
+    var numberLabelHeight: NSLayoutConstraint!
 
-    @IBOutlet var acButton: CustomButton!
-    @IBOutlet var reverseButton: CustomButton!
-    @IBOutlet var percentageButton: CustomButton!
-    @IBOutlet var divideButton: CustomButton!
-    @IBOutlet var sevenButton: CustomButton!
-    @IBOutlet var eightButton: CustomButton!
-    @IBOutlet var nineButton: CustomButton!
-    @IBOutlet var multiplyButton: CustomButton!
-    @IBOutlet var fourthButton: CustomButton!
-    @IBOutlet var fifthButton: CustomButton!
-    @IBOutlet var sixthButton: CustomButton!
-    @IBOutlet var substractionButton: CustomButton!
-    @IBOutlet var firstButton: CustomButton!
-    @IBOutlet var secondButton: CustomButton!
-    @IBOutlet var thirdButton: CustomButton!
-    @IBOutlet var additionButton: CustomButton!
-    @IBOutlet var zeroButton: CustomButton!
-    @IBOutlet var dotButton: CustomButton!
-    @IBOutlet var equalButton: CustomButton!
+    var acButton = CustomButton(tappedImage: UIImage(named: "ac_tap")!, tappedSmallImage: UIImage(named: "ac_tap_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "ac_norm")!, normalSmallImage: UIImage(named: "ac_small")!)
+    var plusMinusButton = CustomButton(tappedImage: UIImage(named: "plus_minus_tap")!, tappedSmallImage: UIImage(named: "plus_minus_tap_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "plus_minus_norm")!, normalSmallImage: UIImage(named: "plus_minus_small")!)
+    var percentageButton = CustomButton(tappedImage: UIImage(named: "perc_minus_tap")!, tappedSmallImage: UIImage(named: "perc_minus_tap_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "perc_minus_norm")!, normalSmallImage: UIImage(named: "perc_minus_small")!)
+    var divideButton = CustomButton(tappedImage: UIImage(named: "div_minus_tap")!, tappedSmallImage: UIImage(named: "div_minus_tap_small")!, selectedImage: UIImage(named: "div_sel"), selectedSmallImage: UIImage(named: "div_sel_small"), normalImage: UIImage(named: "div_minus_norm")!, normalSmallImage: UIImage(named: "div_minus_small")!)
+    var sevenButton = CustomButton(tappedImage: UIImage(named: "7_tap")!, tappedSmallImage: UIImage(named: "7_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "7_norm")!, normalSmallImage: UIImage(named: "7_small")!)
+    var eightButton = CustomButton(tappedImage: UIImage(named: "8_tap")!, tappedSmallImage: UIImage(named: "8_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "8_norm")!, normalSmallImage: UIImage(named: "8_small")!)
+    var nineButton = CustomButton(tappedImage: UIImage(named: "9_tap")!, tappedSmallImage: UIImage(named: "9_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "9_norm")!, normalSmallImage: UIImage(named: "9_small")!)
+    var multiplyButton = CustomButton(tappedImage: UIImage(named: "mult_minus_tap")!, tappedSmallImage: UIImage(named: "mult_minus_tap_small")!, selectedImage: UIImage(named: "mult_sel"), selectedSmallImage: UIImage(named: "mult_sel_small"), normalImage: UIImage(named: "mult_minus_norm")!, normalSmallImage: UIImage(named: "mult_minus_small")!)
+    var fourthButton = CustomButton(tappedImage: UIImage(named: "4_tap")!, tappedSmallImage: UIImage(named: "4_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "4_norm")!, normalSmallImage: UIImage(named: "4_small")!)
+    var fifthButton = CustomButton(tappedImage: UIImage(named: "5_tap")!, tappedSmallImage: UIImage(named: "5_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "5_norm")!, normalSmallImage: UIImage(named: "5_small")!)
+    var sixthButton = CustomButton(tappedImage: UIImage(named: "6_tap")!, tappedSmallImage: UIImage(named: "6_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "6_norm")!, normalSmallImage: UIImage(named: "6_small")!)
+    var substractionButton = CustomButton(tappedImage: UIImage(named: "sub_minus_tap")!, tappedSmallImage: UIImage(named: "sub_minus_tap_small")!, selectedImage: UIImage(named: "sub_sel"), selectedSmallImage: UIImage(named: "sub_sel_small"), normalImage: UIImage(named: "sub_minus_norm")!, normalSmallImage: UIImage(named: "sub_minus_small")!)
+    var firstButton = CustomButton(tappedImage: UIImage(named: "1_tap")!, tappedSmallImage: UIImage(named: "1_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "1_norm")!, normalSmallImage: UIImage(named: "1_small")!)
+    var secondButton = CustomButton(tappedImage: UIImage(named: "2_tap")!, tappedSmallImage: UIImage(named: "2_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "2_norm")!, normalSmallImage: UIImage(named: "2_small")!)
+    var thirdButton = CustomButton(tappedImage: UIImage(named: "3_tap")!, tappedSmallImage: UIImage(named: "3_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "3_norm")!, normalSmallImage: UIImage(named: "3_small")!)
+    var additionButton = CustomButton(tappedImage: UIImage(named: "add_minus_tap")!, tappedSmallImage: UIImage(named: "add_minus_tap_small")!, selectedImage: UIImage(named: "add_sel"), selectedSmallImage: UIImage(named: "add_sel_small"), normalImage: UIImage(named: "add_minus_norm")!, normalSmallImage: UIImage(named: "add_minus_small")!)
+    var zeroButton = CustomButton(tappedImage: UIImage(named: "0_tap")!, tappedSmallImage: UIImage(named: "0_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "0_norm")!, normalSmallImage: UIImage(named: "0_small")!)
+    var dotButton = CustomButton(tappedImage: UIImage(named: "dot_tap")!, tappedSmallImage: UIImage(named: "dot_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "dot_norm")!, normalSmallImage: UIImage(named: "dot_small")!)
+    var equalButton = CustomButton(tappedImage: UIImage(named: "equal_tap")!, tappedSmallImage: UIImage(named: "equal_small")!, selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "equal_norm")!, normalSmallImage: UIImage(named: "equal_small")!)
 
     var buttons: [CustomButton] = []
 
@@ -50,32 +51,8 @@ class ViewController: UIViewController {
         let imageView = UIImageView(image: image)
         self.view.addSubview(imageView)
 
-//        acButton.setImages(tappedImage: image,
-//                           tappedSmallImage: UIImage(named: "ac_tap_small"),
-//                           selectedImage: nil, selectedSmallImage: nil,
-//                           normalImage: UIImage(named: "ac_norm"),
-//                           normalSmallImage: UIImage(named: "ac_small"))
-//        reverseButton.setImages(tappedImage: UIImage(named: "plus_minus_tap"), tappedSmallImage: UIImage(named: "plus_minus_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "plus_minus_norm"), normalSmallImage: UIImage(named: "plus_minus_small"))
-//        percentageButton.setImages(tappedImage: UIImage(named: "perc_tap"), tappedSmallImage: UIImage(named: "perc_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "perc_norm"), normalSmallImage: UIImage(named: "perc_small"))
-//        divideButton.setImages(tappedImage: UIImage(named: "div_tap"), tappedSmallImage: UIImage(named: "div_tap_small"), selectedImage: UIImage(named: "div_sel"), selectedSmallImage: UIImage(named: "div_sel_small"), normalImage: UIImage(named: "div_norm"), normalSmallImage: UIImage(named: "div_small"))
-//        sevenButton.setImages(tappedImage: UIImage(named: "7_tap"), tappedSmallImage: UIImage(named: "7_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "7_norm"), normalSmallImage: UIImage(named: "7_small"))
-//        eightButton.setImages(tappedImage: UIImage(named: "8_tap"), tappedSmallImage: UIImage(named: "8_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "8_norm"), normalSmallImage: UIImage(named: "8_small"))
-//        nineButton.setImages(tappedImage: UIImage(named: "9_tap"), tappedSmallImage: UIImage(named: "9_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "9_norm"), normalSmallImage: UIImage(named: "9_small"))
-//        sixthButton.setImages(tappedImage: UIImage(named: "6_tap"), tappedSmallImage: UIImage(named: "6_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "6_norm"), normalSmallImage: UIImage(named: "6_small"))
-//        fifthButton.setImages(tappedImage: UIImage(named: "5_tap"), tappedSmallImage: UIImage(named: "5_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "5_norm"), normalSmallImage: UIImage(named: "5_small"))
-//        fourthButton.setImages(tappedImage: UIImage(named: "4_tap"), tappedSmallImage: UIImage(named: "4_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "4_norm"), normalSmallImage: UIImage(named: "4_small"))
-//        thirdButton.setImages(tappedImage: UIImage(named: "3_tap"), tappedSmallImage: UIImage(named: "3_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "3_norm"), normalSmallImage: UIImage(named: "3_small"))
-//        secondButton.setImages(tappedImage: UIImage(named: "2_tap"), tappedSmallImage: UIImage(named: "2_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "2_norm"), normalSmallImage: UIImage(named: "2_small"))
-//        firstButton.setImages(tappedImage: UIImage(named: "1_tap"), tappedSmallImage: UIImage(named: "1_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "1_norm"), normalSmallImage: UIImage(named: "1_small"))
-//        zeroButton.setImages(tappedImage: UIImage(named: "0_tap"), tappedSmallImage: UIImage(named: "0_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "0_norm"), normalSmallImage: UIImage(named: "0_small"))
-//        multiplyButton.setImages(tappedImage: UIImage(named: "mult_tap"), tappedSmallImage: UIImage(named: "mult_tap_small"), selectedImage: UIImage(named: "mult_sel"), selectedSmallImage: UIImage(named: "mult_sel_small"), normalImage: UIImage(named: "mult_norm"), normalSmallImage: UIImage(named: "mult_small"))
-//        substractionButton.setImages(tappedImage: UIImage(named: "sub_tap"), tappedSmallImage: UIImage(named: "sub_tap_small"), selectedImage: UIImage(named: "sub_sel"), selectedSmallImage: UIImage(named: "sub_sel_small"), normalImage: UIImage(named: "sub_norm"), normalSmallImage: UIImage(named: "sub_small"))
-//        additionButton.setImages(tappedImage: UIImage(named: "add_tap"), tappedSmallImage: UIImage(named: "add_tap_small"), selectedImage: UIImage(named: "add_sel"), selectedSmallImage: UIImage(named: "add_sel_small"), normalImage: UIImage(named: "add_norm"), normalSmallImage: UIImage(named: "add_small"))
-//        dotButton.setImages(tappedImage: UIImage(named: "dot_tap"), tappedSmallImage: UIImage(named: "dot_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "dot_norm"), normalSmallImage: UIImage(named: "dot_small"))
-//        equalButton.setImages(tappedImage: UIImage(named: "equal_tap"), tappedSmallImage: UIImage(named: "equal_tap_small"), selectedImage: nil, selectedSmallImage: nil, normalImage: UIImage(named: "equal_norm"), normalSmallImage: UIImage(named: "equal_small"))
-
         buttons.append(acButton)
-        buttons.append(reverseButton)
+        buttons.append(plusMinusButton)
         buttons.append(percentageButton)
         buttons.append(divideButton)
         buttons.append(sevenButton)

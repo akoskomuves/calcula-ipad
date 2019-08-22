@@ -3,39 +3,36 @@ import Foundation
 
 class CustomButton: UIButton {
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     override var isHighlighted: Bool {
         didSet { if isHighlighted { isHighlighted = false } }
     }
 
-    var tappedImage: UIImage?
-    var tappedSmallImage: UIImage?
+    var tappedImage: UIImage
+    var tappedSmallImage: UIImage
     var selectedImage: UIImage?
     var selectedSmallImage: UIImage?
-    var normalImage: UIImage?
-    var normalSmallImage: UIImage?
+    var normalImage: UIImage
+    var normalSmallImage: UIImage
 
-    func setImages(tappedImage: UIImage?,
-                   tappedSmallImage: UIImage?,
+    init(tappedImage: UIImage,
+                   tappedSmallImage: UIImage,
                    selectedImage: UIImage?,
                    selectedSmallImage: UIImage?,
-                   normalImage: UIImage?,
-                   normalSmallImage: UIImage?) {
+                   normalImage: UIImage,
+                   normalSmallImage: UIImage) {
         self.tappedImage = tappedImage
         self.tappedSmallImage = tappedSmallImage
         self.selectedImage = selectedImage
         self.selectedSmallImage = selectedSmallImage
         self.normalImage = normalImage
         self.normalSmallImage = normalSmallImage
+        super.init(frame: .null)
     }
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var buttonState = ButtonState.normal {
         didSet {
             switch buttonState {
