@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04D560421FBAC4FB00D9F3BB /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D560421FBAC4FB00D9F3BB /* CalculaPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculaPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D560451FBAC4FB00D9F3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D560471FBAC4FB00D9F3BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04D5604C1FBAC4FB00D9F3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		04D560431FBAC4FB00D9F3BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04D560421FBAC4FB00D9F3BB /* calculator.app */,
+				04D560421FBAC4FB00D9F3BB /* CalculaPad.app */,
 				04D560561FBAC4FC00D9F3BB /* calculatorTests.xctest */,
 				04D560611FBAC4FC00D9F3BB /* calculatorUITests.xctest */,
 			);
@@ -141,7 +141,6 @@
 				C91418DF8A8C5A2D95F3A929 /* Pods-calculator.debug.xcconfig */,
 				5C7673F9A5319F4440E6DE8B /* Pods-calculator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -172,7 +171,7 @@
 			);
 			name = calculator;
 			productName = calculator;
-			productReference = 04D560421FBAC4FB00D9F3BB /* calculator.app */;
+			productReference = 04D560421FBAC4FB00D9F3BB /* CalculaPad.app */;
 			productType = "com.apple.product-type.application";
 		};
 		04D560551FBAC4FC00D9F3BB /* calculatorTests */ = {
@@ -507,7 +506,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akoskomuves.calcula;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CalculaPad;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -524,7 +523,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = akoskomuves.calcula;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CalculaPad;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

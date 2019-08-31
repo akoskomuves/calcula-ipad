@@ -1,5 +1,6 @@
 import UIKit
 import Foundation
+import SnapKit
 
 class CustomButton: UIButton {
 
@@ -7,25 +8,28 @@ class CustomButton: UIButton {
         didSet { if isHighlighted { isHighlighted = false } }
     }
 
-    var tappedImage: UIImage
-    var tappedSmallImage: UIImage
-    var selectedImage: UIImage?
-    var selectedSmallImage: UIImage?
-    var normalImage: UIImage
-    var normalSmallImage: UIImage
+    let tappedImage: UIImage
+    let tappedSmallImage: UIImage
+    let selectedImage: UIImage?
+    let selectedSmallImage: UIImage?
+    let normalImage: UIImage
+    let normalSmallImage: UIImage
+    let type: CalculatorButtonType
 
     init(tappedImage: UIImage,
                    tappedSmallImage: UIImage,
                    selectedImage: UIImage?,
                    selectedSmallImage: UIImage?,
                    normalImage: UIImage,
-                   normalSmallImage: UIImage) {
+                   normalSmallImage: UIImage,
+                   type: CalculatorButtonType) {
         self.tappedImage = tappedImage
         self.tappedSmallImage = tappedSmallImage
         self.selectedImage = selectedImage
         self.selectedSmallImage = selectedSmallImage
         self.normalImage = normalImage
         self.normalSmallImage = normalSmallImage
+        self.type = type
         super.init(frame: .null)
     }
     
@@ -44,12 +48,32 @@ class CustomButton: UIButton {
                     self.setBackgroundImage(tappedSmallImage, for: .normal)
                 }
             case .normal:
+                let tmpImage: UIImageView
                 switch screenSize {
                 case .normal:
-                    self.setBackgroundImage(normalImage, for: .normal)
+                    tmpImage = UIImageView(image: self.normalImage)
                 case .small:
-                    self.setBackgroundImage(normalSmallImage, for: .normal)
+                    tmpImage = UIImageView(image: self.normalSmallImage)
                 }
+                
+                self.superview?.addSubview(tmpImage)
+                self.superview?.sendSubviewToBack(tmpImage)
+                tmpImage.snp.makeConstraints { make in
+                    make.edges.equalTo(self)
+                }
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.alpha = 0.0
+                }, completion:{(finished) in
+                    switch screenSize {
+                    case .normal:
+                        self.setBackgroundImage(self.normalImage, for: .normal)
+                    case .small:
+                        self.setBackgroundImage(self.normalSmallImage, for: .normal)
+                    }
+                    self.alpha = 1.0
+                    tmpImage.removeFromSuperview()
+                })
+                
             case .selected:
                 switch screenSize {
                 case .normal:
@@ -65,5 +89,12 @@ class CustomButton: UIButton {
         case tapped
         case normal
         case selected
+    }
+    
+    enum CalculatorButtonType {
+        case number
+        case operation
+        case singleFunction
+        case equal
     }
 }
