@@ -390,6 +390,10 @@ class ViewController: UIViewController {
         if let acButton = sender as? CustomButton {
             acButton.buttonState = .normal
         }
+        if operation {
+            self.highlightedButton?.buttonState = .normal
+        }
+        number1 = nil
         numberlabel.text = "0"
         operation = true
         hasComma = false
@@ -401,8 +405,20 @@ class ViewController: UIViewController {
             negative.buttonState = .normal
         }
         var textnum = String(numberlabel.text!)
-        textnum = "-" + textnum
-        numberlabel.text = textnum
+        
+        if textnum.contains("-") {
+            textnum.remove(at: textnum.startIndex)
+        } else {
+            textnum = "-" + textnum
+        }
+        
+        if let number = Double(textnum) {
+            let value  = String(format: "%g", number)
+            numberlabel.text = value
+        } else {
+            numberlabel.text = "0"
+        }
+
         operation = true
     }
     
@@ -483,6 +499,7 @@ class ViewController: UIViewController {
             numberlabel.snp.updateConstraints { make in
                 make.height.equalTo(60)
                 make.width.equalTo(255)
+                make.bottom.equalTo(stackView.snp.top).offset(-16)
             }
 
             stackView.spacing = 15
@@ -497,6 +514,7 @@ class ViewController: UIViewController {
             numberlabel.snp.updateConstraints { make in
                 make.height.equalTo(80)
                 make.width.equalTo(340)
+                make.bottom.equalTo(stackView.snp.top).offset(-20)
             }
 
             stackView.spacing = 20
