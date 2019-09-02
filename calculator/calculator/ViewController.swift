@@ -220,6 +220,8 @@ class ViewController: UIViewController {
         numberlabel.text = "0"
         numberlabel.textColor = .white
         numberlabel.font = UIFont.systemFont(ofSize: 64, weight: .light)
+        numberlabel.numberOfLines = 1
+        numberlabel.adjustsFontSizeToFitWidth = true
         
         view.addSubview(stackView)
         stackView.contentMode = .scaleToFill
@@ -382,7 +384,7 @@ class ViewController: UIViewController {
             operation = false
         }
         textnum = textnum + (sender.accessibilityIdentifier ?? "")
-        numberlabel.text = textnum
+        numberlabel.text = textnum.maxLength(length: 9)
     }
     
     //clear button action
@@ -404,7 +406,7 @@ class ViewController: UIViewController {
         if let negative = sender as? CustomButton {
             negative.buttonState = .normal
         }
-        var textnum = String(numberlabel.text!)
+        var textnum = String(numberlabel.text!).maxLength(length: 9)
         
         if textnum.contains("-") {
             textnum.remove(at: textnum.startIndex)
@@ -414,11 +416,11 @@ class ViewController: UIViewController {
         
         if let number = Double(textnum) {
             let value  = String(format: "%g", number)
-            numberlabel.text = value
+            numberlabel.text = value.maxLength(length: 9)
         } else {
             numberlabel.text = "0"
         }
-
+        
         operation = true
     }
     
@@ -429,7 +431,7 @@ class ViewController: UIViewController {
         }
         var number1 = numberlabel.text!.doubleValue
         number1 = number1/100.0
-        numberlabel.text = String(number1)
+        numberlabel.text = String(number1).maxLength(length: 9)
         operation = true
         hasComma = false
     }
@@ -480,7 +482,7 @@ class ViewController: UIViewController {
         }
         if let result = result {
             let value  = String(format: "%g", result)
-            numberlabel.text = value
+            numberlabel.text = value.maxLength(length: 9)
         } else {
             numberlabel.text = "Error"
         }
@@ -494,14 +496,14 @@ class ViewController: UIViewController {
         
         if size.width <= 320 {
             screenSize = .small
-
+            
             numberlabel.font = UIFont.systemFont(ofSize: 48, weight: .light)
             numberlabel.snp.updateConstraints { make in
                 make.height.equalTo(60)
                 make.width.equalTo(255)
                 make.bottom.equalTo(stackView.snp.top).offset(-16)
             }
-
+            
             stackView.spacing = 15
             firstStackView.spacing = 15
             secondStackView.spacing = 15
@@ -509,14 +511,14 @@ class ViewController: UIViewController {
             fourthStackView.spacing = 15
         } else {
             screenSize = .normal
-
+            
             numberlabel.font = UIFont.systemFont(ofSize: 64, weight: .light)
             numberlabel.snp.updateConstraints { make in
                 make.height.equalTo(80)
                 make.width.equalTo(340)
                 make.bottom.equalTo(stackView.snp.top).offset(-20)
             }
-
+            
             stackView.spacing = 20
             firstStackView.spacing = 20
             secondStackView.spacing = 20
@@ -544,6 +546,19 @@ extension String {
             }
         }
         return 0
+    }
+    
+    func maxLength(length: Int) -> String {
+        var str = self
+        let nsString = str as NSString
+        if nsString.length >= length {
+            str = nsString.substring(with:
+                NSRange(
+                    location: 0,
+                    length: nsString.length > length ? length : nsString.length)
+            )
+        }
+        return  str
     }
 }
 

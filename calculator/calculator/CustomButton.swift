@@ -61,9 +61,9 @@ class CustomButton: UIButton {
                 tmpImage.snp.makeConstraints { make in
                     make.edges.equalTo(self)
                 }
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.alpha = 0.0
-                }, completion:{(finished) in
+                UIView.animate(withDuration: 0.5, delay: 0.0, options: .allowUserInteraction, animations: {
+                    self.alpha = 0.1
+                }) { _ in
                     switch screenSize {
                     case .normal:
                         self.setBackgroundImage(self.normalImage, for: .normal)
@@ -72,7 +72,7 @@ class CustomButton: UIButton {
                     }
                     self.alpha = 1.0
                     tmpImage.removeFromSuperview()
-                })
+                }
                 
             case .selected:
                 switch screenSize {
