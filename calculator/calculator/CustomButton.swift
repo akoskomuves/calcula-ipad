@@ -41,6 +41,7 @@ class CustomButton: UIButton {
         didSet {
             switch buttonState {
             case .tapped:
+                self.layer.removeAllAnimations()
                 switch screenSize {
                 case .normal:
                     self.setBackgroundImage(tappedImage, for: .normal)
@@ -56,12 +57,12 @@ class CustomButton: UIButton {
                     tmpImage = UIImageView(image: self.normalSmallImage)
                 }
                 
-                self.superview?.addSubview(tmpImage)
-                self.superview?.sendSubviewToBack(tmpImage)
-                tmpImage.snp.makeConstraints { make in
-                    make.edges.equalTo(self)
-                }
                 UIView.animate(withDuration: 0.5, delay: 0.0, options: .allowUserInteraction, animations: {
+                    self.superview?.addSubview(tmpImage)
+                    self.superview?.sendSubviewToBack(tmpImage)
+                    tmpImage.snp.makeConstraints { make in
+                        make.edges.equalTo(self)
+                    }
                     self.alpha = 0.1
                 }) { _ in
                     switch screenSize {
