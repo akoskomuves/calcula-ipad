@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     
     var numberlabel = UILabel()
     var highlightedButton: CustomButton?
+    static var cEnabled = false
     
     var stackView = UIStackView()
     var firstStackView = UIStackView()
@@ -24,7 +25,8 @@ class ViewController: UIViewController {
         selectedSmallImage: nil,
         normalImage: UIImage(named: "ac_norm")!,
         normalSmallImage: UIImage(named: "ac_small")!,
-        type: .singleFunction
+        type: .singleFunction,
+        acButton: true
     )
     
     var plusMinusButton = CustomButton(
@@ -247,17 +249,17 @@ class ViewController: UIViewController {
         
         firstStackView.addArrangedSubview(acButton)
         acButton.addTarget(self, action: #selector(acaction), for: .touchUpInside)
-        acButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        acButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         firstStackView.addArrangedSubview(plusMinusButton)
         plusMinusButton.addTarget(self, action: #selector(some), for: .touchUpInside)
-        plusMinusButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        plusMinusButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         firstStackView.addArrangedSubview(percentageButton)
         percentageButton.addTarget(self, action: #selector(percentage), for: .touchUpInside)
-        percentageButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        percentageButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         firstStackView.addArrangedSubview(divideButton)
         divideButton.accessibilityIdentifier = "/"
         divideButton.addTarget(self, action: #selector(baseOperatorDidTap), for: .touchUpInside)
-        divideButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        divideButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         
         stackView.addArrangedSubview(secondStackView)
         secondStackView.contentMode = .scaleToFill
@@ -268,19 +270,19 @@ class ViewController: UIViewController {
         secondStackView.addArrangedSubview(sevenButton)
         sevenButton.accessibilityIdentifier = "7"
         sevenButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        sevenButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        sevenButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         secondStackView.addArrangedSubview(eightButton)
         eightButton.accessibilityIdentifier = "8"
         eightButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        eightButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        eightButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         secondStackView.addArrangedSubview(nineButton)
         nineButton.accessibilityIdentifier = "9"
         nineButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        nineButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        nineButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         secondStackView.addArrangedSubview(multiplyButton)
         multiplyButton.accessibilityIdentifier = "*"
         multiplyButton.addTarget(self, action: #selector(baseOperatorDidTap), for: .touchUpInside)
-        multiplyButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        multiplyButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         
         stackView.addArrangedSubview(thirdStackView)
         thirdStackView.contentMode = .scaleToFill
@@ -291,19 +293,19 @@ class ViewController: UIViewController {
         thirdStackView.addArrangedSubview(fourthButton)
         fourthButton.accessibilityIdentifier = "4"
         fourthButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        fourthButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        fourthButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         thirdStackView.addArrangedSubview(fifthButton)
         fifthButton.accessibilityIdentifier = "5"
         fifthButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        fifthButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        fifthButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         thirdStackView.addArrangedSubview(sixthButton)
         sixthButton.accessibilityIdentifier = "6"
         sixthButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        sixthButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        sixthButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         thirdStackView.addArrangedSubview(substractionButton)
         substractionButton.accessibilityIdentifier = "-"
         substractionButton.addTarget(self, action: #selector(baseOperatorDidTap), for: .touchUpInside)
-        substractionButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        substractionButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         
         stackView.addArrangedSubview(fourthStackView)
         fourthStackView.contentMode = .scaleToFill
@@ -314,32 +316,32 @@ class ViewController: UIViewController {
         fourthStackView.addArrangedSubview(firstButton)
         firstButton.accessibilityIdentifier = "1"
         firstButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        firstButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        firstButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         fourthStackView.addArrangedSubview(secondButton)
         secondButton.accessibilityIdentifier = "2"
         secondButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        secondButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        secondButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         fourthStackView.addArrangedSubview(thirdButton)
         thirdButton.accessibilityIdentifier = "3"
         thirdButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        thirdButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        thirdButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         fourthStackView.addArrangedSubview(additionButton)
         additionButton.accessibilityIdentifier = "+"
         additionButton.addTarget(self, action: #selector(baseOperatorDidTap), for: .touchUpInside)
-        additionButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        additionButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         
         let fifthView = UIView()
         stackView.addArrangedSubview(fifthView)
         fifthView.addSubview(zeroButton)
         zeroButton.accessibilityIdentifier = "0"
         zeroButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        zeroButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        zeroButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         zeroButton.snp.makeConstraints { (make) in
             make.left.top.bottom.equalToSuperview()
         }
         fifthView.addSubview(dotButton)
         dotButton.addTarget(self, action: #selector(numberDidTap), for: .touchUpInside)
-        dotButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        dotButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         dotButton.accessibilityIdentifier = "."
         dotButton.snp.makeConstraints { (make) in
             make.left.equalTo(zeroButton.snp.right).offset(20)
@@ -347,7 +349,7 @@ class ViewController: UIViewController {
         }
         fifthView.addSubview(equalButton)
         equalButton.addTarget(self, action: #selector(equals), for: .touchUpInside)
-        equalButton.addTarget(self, action: #selector(numberTouchDown), for: .touchDown)
+        equalButton.addTarget(self, action: #selector(buttonTouchDown), for: .touchDown)
         equalButton.accessibilityIdentifier = "="
         equalButton.snp.makeConstraints { (make) in
             make.left.equalTo(dotButton.snp.right).offset(20)
@@ -384,6 +386,13 @@ class ViewController: UIViewController {
     }
     
     @objc func numberDidTap(_ sender: UIButton) {
+        ViewController.cEnabled = true
+        switch screenSize {
+        case .normal:
+            acButton.setBackgroundImage(UIImage(named: "c_norm")!, for: .normal)
+        case .small:
+            acButton.setBackgroundImage(UIImage(named: "c_small")!, for: .normal)
+        }
         if let button = sender as? CustomButton {
             button.buttonState = .normal
         }
@@ -405,7 +414,7 @@ class ViewController: UIViewController {
         numberlabel.text = textnum.maxLength(length: 9)
     }
     
-    @objc func numberTouchDown(_ sender: UIButton) {
+    @objc func buttonTouchDown(_ sender: UIButton) {
         if let button = sender as? CustomButton {
             button.buttonState = .tapped
         }
@@ -416,13 +425,19 @@ class ViewController: UIViewController {
         if let acButton = sender as? CustomButton {
             acButton.buttonState = .normal
         }
-        if operation {
-            self.highlightedButton?.buttonState = .normal
+        if ViewController.cEnabled {
+            numberlabel.text = "0"
+            ViewController.cEnabled = false
+        } else {
+            if operation {
+                self.highlightedButton?.buttonState = .normal
+            }
+            self.highlightedButton = nil
+            number1 = nil
+            numberlabel.text = "0"
+            operation = true
+            hasComma = false
         }
-        number1 = nil
-        numberlabel.text = "0"
-        operation = true
-        hasComma = false
     }
     
     //number making negitive

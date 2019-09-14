@@ -3,11 +3,11 @@ import Foundation
 import SnapKit
 
 class CustomButton: UIButton {
-
+    
     override var isHighlighted: Bool {
         didSet { if isHighlighted { isHighlighted = false } }
     }
-
+    
     let tappedImage: UIImage
     let tappedSmallImage: UIImage
     let selectedImage: UIImage?
@@ -15,14 +15,16 @@ class CustomButton: UIButton {
     let normalImage: UIImage
     let normalSmallImage: UIImage
     let type: CalculatorButtonType
-
+    let acButton: Bool
+    
     init(tappedImage: UIImage,
-                   tappedSmallImage: UIImage,
-                   selectedImage: UIImage?,
-                   selectedSmallImage: UIImage?,
-                   normalImage: UIImage,
-                   normalSmallImage: UIImage,
-                   type: CalculatorButtonType) {
+         tappedSmallImage: UIImage,
+         selectedImage: UIImage?,
+         selectedSmallImage: UIImage?,
+         normalImage: UIImage,
+         normalSmallImage: UIImage,
+         type: CalculatorButtonType,
+         acButton: Bool = false) {
         self.tappedImage = tappedImage
         self.tappedSmallImage = tappedSmallImage
         self.selectedImage = selectedImage
@@ -30,6 +32,7 @@ class CustomButton: UIButton {
         self.normalImage = normalImage
         self.normalSmallImage = normalSmallImage
         self.type = type
+        self.acButton = acButton
         super.init(frame: .null)
     }
     
@@ -42,14 +45,29 @@ class CustomButton: UIButton {
             switch buttonState {
             case .tapped:
                 self.layer.removeAllAnimations()
+                if acButton && ViewController.cEnabled {
+                        switch screenSize {
+                        case .normal:
+                            self.setBackgroundImage(UIImage(named: "c_tap")!, for: .normal)
+                        case .small:
+                            self.setBackgroundImage(UIImage(named: "c_tap_small")!, for: .normal)
+                        }
+                    } else {
+                        switch screenSize {
+                        case .normal:
+                            self.setBackgroundImage(tappedImage, for: .normal)
+                        case .small:
+                            self.setBackgroundImage(tappedSmallImage, for: .normal)
+                        }
+                    }
+            case .normal:
+                let tmpImage: UIImageView
                 switch screenSize {
                 case .normal:
                     self.setBackgroundImage(tappedImage, for: .normal)
                 case .small:
                     self.setBackgroundImage(tappedSmallImage, for: .normal)
                 }
-            case .normal:
-                let tmpImage: UIImageView
                 switch screenSize {
                 case .normal:
                     tmpImage = UIImageView(image: self.normalImage)
@@ -85,7 +103,7 @@ class CustomButton: UIButton {
             }
         }
     }
-
+    
     enum ButtonState {
         case tapped
         case normal
