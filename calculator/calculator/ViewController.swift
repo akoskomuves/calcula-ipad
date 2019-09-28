@@ -215,7 +215,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .gray
         
         view.addSubview(numberlabel)
         numberlabel.textAlignment = .right
@@ -530,9 +530,8 @@ class ViewController: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        print(size.width)
         
-        if size.width <= 320 {
+        if size.width < 410 {
             screenSize = .small
             
             numberlabel.font = UIFont.systemFont(ofSize: 48, weight: .light)
